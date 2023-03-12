@@ -1,0 +1,28 @@
+:root {
+  --border-color: grey;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.bayan__container {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.bayan__item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-cross {
+  transform: rotate(45deg);
+}
