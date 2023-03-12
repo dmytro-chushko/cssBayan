@@ -1,5 +1,5 @@
 :root {
-  --border-color: grey;
+  --border-color: #d9dfe4;
 }
 
 ul,
@@ -23,6 +23,27 @@ ul {
   justify-content: space-between;
 }
 
+.bayan__item {
+  border-top: solid 0.1rem var(--border-color);
+}
+
 .icon-cross {
+  opacity: 0;
+  font-size: 0.7rem;
   transform: rotate(45deg);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bayan__list:hover .icon-cross {
+  opacity: 1;
+}
+
+.bayan__radio {
+  display: none;
+}
+
+.bayan__radio:checked + .bayan__item-wrapper > .icon-cross,
+.bayan__item:hover .icon-cross {
+  transform: rotate(0deg);
+  opacity: 1;
 }
