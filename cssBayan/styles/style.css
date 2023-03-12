@@ -29,6 +29,10 @@ ul {
   justify-content: space-between;
 }
 
+.bayan__label {
+  cursor: pointer;
+}
+
 .bayan__item {
   border-top: solid 0.1rem var(--border-color);
 }
@@ -67,7 +71,6 @@ ul {
   display: none;
 }
 
-.bayan__radio:checked + .bayan__item-wrapper > .icon-cross,
 .bayan__item:hover .icon-cross {
   transform: rotate(0deg);
   opacity: 1;
@@ -78,4 +81,60 @@ ul {
   height: 10rem;
   padding: 1rem;
   scale: 1;
+}
+
+.bayan__label:active > .bayan__item-wrapper > .bayan__content {
+  color: var(--primary-color);
+}
+
+@media screen and (min-width: 820px) and (max-width: 1919px) {
+  .bayan__container {
+    width: 80%;
+    padding: 0 2rem;
+  }
+
+  .bayan__content {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  .bayan__title {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .bayan__item:hover .bayan__img,
+  .bayan__radio:checked ~ .bayan__img {
+    height: 20rem;
+  }
+
+  .icon-cross {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .bayan__container {
+    width: 60%;
+    padding: 0 4rem;
+  }
+
+  .bayan__content {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .bayan__title {
+    font-size: 5rem;
+    font-weight: 900;
+  }
+
+  .bayan__item:hover .bayan__img,
+  .bayan__radio:checked ~ .bayan__img {
+    height: 30rem;
+  }
+
+  .icon-cross {
+    font-size: 1.5rem;
+  }
 }
